@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EEPROM_TEST", "EEPROM_TEST\EEPROM_TEST.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AccessPoint", "..\My Examples\AccessPoint\AccessPoint.vcxproj", "{53183B9A-D28E-4271-8280-A96EAF388CC9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScanNetworks", "..\..\..\AppData\Local\arduino15\packages\LinkIt\hardware\linkit_rtos\0.10.21\libraries\LWiFi\examples\ScanNetworks\ScanNetworks.vcxproj", "{D32A2F6E-C9AD-4C98-A2DB-65D7E8AF5189}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WiFiWebClient", "..\..\..\AppData\Local\arduino15\packages\LinkIt\hardware\linkit_rtos\0.10.21\libraries\LWiFi\examples\WiFiWebClient\WiFiWebClient.vcxproj", "{CD55982A-6E2E-4A42-B2A8-50526526A3CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{53183B9A-D28E-4271-8280-A96EAF388CC9}.Debug|x86.ActiveCfg = Debug|Win32
+		{53183B9A-D28E-4271-8280-A96EAF388CC9}.Debug|x86.Build.0 = Debug|Win32
+		{53183B9A-D28E-4271-8280-A96EAF388CC9}.Release|x86.ActiveCfg = Release|Win32
+		{53183B9A-D28E-4271-8280-A96EAF388CC9}.Release|x86.Build.0 = Release|Win32
+		{D32A2F6E-C9AD-4C98-A2DB-65D7E8AF5189}.Debug|x86.ActiveCfg = Debug|Win32
+		{D32A2F6E-C9AD-4C98-A2DB-65D7E8AF5189}.Debug|x86.Build.0 = Debug|Win32
+		{D32A2F6E-C9AD-4C98-A2DB-65D7E8AF5189}.Release|x86.ActiveCfg = Release|Win32
+		{D32A2F6E-C9AD-4C98-A2DB-65D7E8AF5189}.Release|x86.Build.0 = Release|Win32
+		{CD55982A-6E2E-4A42-B2A8-50526526A3CD}.Debug|x86.ActiveCfg = Debug|Win32
+		{CD55982A-6E2E-4A42-B2A8-50526526A3CD}.Debug|x86.Build.0 = Debug|Win32
+		{CD55982A-6E2E-4A42-B2A8-50526526A3CD}.Release|x86.ActiveCfg = Release|Win32
+		{CD55982A-6E2E-4A42-B2A8-50526526A3CD}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E98D4907-060C-47F7-A2BC-E0A231D27960}
+	EndGlobalSection
+EndGlobal
