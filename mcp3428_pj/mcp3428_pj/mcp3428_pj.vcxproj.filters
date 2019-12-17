@@ -27,6 +27,9 @@
     <ClInclude Include="mcp3428.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="alibration_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mcp3428.cpp">

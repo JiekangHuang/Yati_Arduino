@@ -28,7 +28,7 @@
 #define MCP3428_GAIN_MIN         1
 #define MCP3428_GAIN_MAX         4
 
-#define DEGUG
+//#define NEGATIVE_SIGN
 
 typedef enum {
     ERROR_NONE = 0,

@@ -1,6 +1,9 @@
 ﻿#include "mcp3428.h"
 
 #define UARTBAUDRATE         115200
+#define CONVERSION_TIME      60
+
+uint32_t pre, cur;
 
 void setup()
 {
@@ -14,23 +17,23 @@ void setup()
 
 void loop()
 {
+    int32_t adc_data = 0;
     int8_t error;
     mcp3428_reg config;
     config.mode = MCP3428_CONTINUOUS_MODE;
-    config.rate = 12;
+    config.rate = MCP3428_RATE_16;
     config.gain = 1;
 
     for (uint8_t ch = MCP3428_CH0; ch <= MCP3428_CH3; ch++) {
-        int32_t adc_data = 0;
-        error = setMCP3428Config(ch, &config);
-        delay(15);
-        error = readMCP3428AdcData(&adc_data);
+        setMCP3428Config(ch, &config);
+        delay(CONVERSION_TIME);
+        readMCP3428AdcData(&adc_data);
 
         Serial.print("ch : ");
         Serial.print(ch + 1);
         Serial.print(" , ADC Value = ");
         Serial.println(adc_data);
-        delay(200);
     }
     Serial.println();
+    delay(1000);
 }

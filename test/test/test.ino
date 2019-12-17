@@ -18,14 +18,18 @@ void loop()
     int32_t data;
     mcp3428_reg config;
     config.mode = 1;
-    config.rate = 12;
+    config.rate = 16;
     config.gain = 1;
 
-    error = setMCP3428Config(0, &config);
-    delay(20);
-    error = readMCP3428AdcData(&data);
-    error = resetMCP3428();
-    error = setMCP3428Latch();
-    error = setMCP3428Conversion();
-    Serial.println(error);
+    for (int ch = MCP3428_CH0; ch <= MCP3428_CH3; ch++)
+    {
+        error = setMCP3428Config(ch, &config);
+        while (readMCP3428AdcData(&data) != 0);
+        /*error = resetMCP3428();
+        error = setMCP3428Latch();
+        error = setMCP3428Conversion();*/
+        Serial.println(data);
+        delay(200);
+    }
+    delay(1000);
 }

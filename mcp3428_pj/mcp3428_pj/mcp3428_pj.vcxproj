@@ -119,6 +119,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="alibration_file.h" />
     <ClInclude Include="mcp3428.h" />
     <ClInclude Include="__vm\.mcp3428_pj.vsarduino.h" />
   </ItemGroup>

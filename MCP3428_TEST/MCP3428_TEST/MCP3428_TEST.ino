@@ -12,36 +12,35 @@ https://www.controleverything.com/content/Analog-Digital-Converters?sku=MCP3428_
 #include <Wire.h>
 
 MCP3428 MCP(0x06);
-
+uint32_t pre, cur;
 void setup()
 {
-	Serial.begin(115200);
-	Serial.println("MCP3428 Analog to Digital Converter");
-	Serial.println("Getting ADC Readings from Channel 1...4");
-	Serial.println("        ************************************            ");
-	Serial.println("        ");
-	delay(500);
+    Serial.begin(115200);
+    Serial.println("MCP3428 Analog to Digital Converter");
+    Serial.println("Getting ADC Readings from Channel 1...4");
+    Serial.println("        ************************************            ");
+    Serial.println("        ");
+    delay(500);
+    pre = millis();
 }
 
 void loop()
 {
-	long Raw_ADC[4];
+    pre = millis();
+    long Raw_ADC[4];
 
-	for (int i = 1; i <= 4; i++)
-	{
-		// MCP3428 is configured to channel i with 12 bits resolution, continuous mode and gain defined to 1
-		// This arrangement of the mentioned paarmeters can be changed as per convenience
-		MCP.SetConfiguration(i, 12, 1, 1);
+    for (int i = 1; i <= 4; i++)
+    {
+        // MCP3428 is configured to channel i with 12 bits resolution, continuous mode and gain defined to 1
+        // This arrangement of the mentioned paarmeters can be changed as per convenience
+        MCP.SetConfiguration(i, 12, 1, 1);
 
-		// Note that the library waits for a complete conversion
-		Raw_ADC[i - 1] = MCP.readADC();
-		// print results
-		Serial.print("Digital value of Analog Input at Channel ");
-		Serial.print(i);
-		Serial.print(" : ");
-		Serial.println(Raw_ADC[i - 1]);
-		Serial.println("        ");
-		//delay(1000);
-	}
-	delay(500);
+        // Note that the library waits for a complete conversion
+        Raw_ADC[i - 1] = MCP.readADC();
+        Serial.print(i);
+        Serial.print(" : ");
+        Serial.println(Raw_ADC[i - 1]);
+    }
+    cur = millis();
+    Serial.println(cur - pre);
 }
